@@ -59,3 +59,8 @@ tokenizer.all_special_tokens=['<|endoftext|>', '[SEP]', '<|endoftext|>']
     sep_token = tokenizer.bos_token
   ```
 这样的解决方案局限性很明显，如果我需要bos_token呢？放一个以后可能会需要的[链接](https://stackoverflow.com/questions/73322462/how-to-add-all-standard-special-tokens-to-my-hugging-face-tokenizer-and-model)
+
+### RateLimitError
+在调用OpenAI开放的ChatGPT API时，遇到RateLimitError。自我感觉没有发送太多请求。
+
+解决方法：
