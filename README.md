@@ -64,3 +64,13 @@ tokenizer.all_special_tokens=['<|endoftext|>', '[SEP]', '<|endoftext|>']
 在调用OpenAI开放的ChatGPT API时，遇到RateLimitError。自我感觉没有发送太多请求。
 
 解决方法：
+限制对话次数
+```
+	if len(chat.messages) >= 6:
+		print("*********强制重置对话**********")
+		# 写入之前信息
+		chat.writeTojson()
+		user = 'nadia' + str(i)
+		chat = ChatGPT(user)
+		time.sleep(60)
+```
